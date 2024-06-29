@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app = 'interpolating images'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="interpolating.js" charset="utf-8"></script>
+    <title>Interpolating Images</title>
+    <style media="screen">
+      span{float:right;
+      color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Interpolation & Expressions</h2>
+
+    <div class="" ng-controller = 'dontLough'>
+      <p>We are Proud to have you Web Developer, <strong>Welcome to JavaScript</strong></p>
+      <button type="button" name="" ng-click = 'learnjs()'>Learn Javascript</button>
+      <span>Don't Lough the Challenge!</span><br><br>
+
+      <img ng-src="images/try_{{language}}.jpg"   width="50%">
+    </div>
+
+
+
+  </body>
+</html>
