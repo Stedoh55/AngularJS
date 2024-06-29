@@ -9,7 +9,4 @@
     $scope.nameInput = ''
   }); //End of Contoller -- InsertName --
 
-
-
-
 })(); //Close Tag of the IIFE
