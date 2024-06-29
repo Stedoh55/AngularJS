@@ -19,7 +19,7 @@
 
         <label for="name">First Name:</label>
         <!-- Capitalize After each letter being typed( On keyup) -->
-        <input type="text" name="name" id="fname" placeholder="First Name" required="" ng-model = 'fname' ng-keyup = 'upper();'><br><br>
+        <input type="text" name="name" id="fname" placeholder="First Name" required=""  ng-model = 'fname' ng-keyup = 'upper();'><br><br>
 
         <!-- Capitalize After leaving the fieled ( onblur) -->
         <label for="name">Middle Name:</label>
@@ -32,10 +32,10 @@
         <input type="text" name="name" id="course" placeholder="Eg. Bsc. Nursing" required="" ng-model = 'courname' ng-keyup = 'upper();'><br><br>
 
         <label for="address">Address:</label>
-        <input type="text" name="address" id="address" autocomplete="address" placeholder="Your Address" required="" ng-model = 'addrname' ng-blur = 'upper();'><br><br>
+        <input type="text" name="address" id="address" autocomplete="address" maxlength="25" placeholder="Your Address" required="" ng-model = 'addrname' ng-keyup = 'upper();'><br><br>
 
-        <label for="name">Date of Birth:</label>
-        <input type="date" name="name" id="Date" placeholder="Date of Birth" min="2001" max="2004" required=""><br><br>
+        <label for="name">Commencement Date:</label>
+        <input type="date" name="name" id="Date"  min="2021-10-28" max="2021-11-11" required="" <br><br>
 
         <label id="gender">Gender:</label><br>
         <input type="radio" name="Gender" id="Male" value="Male" required="">
