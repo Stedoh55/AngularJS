@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingList">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Shopping List</title>
+</head>
+<body>
+    <h1>Shopping List</h1>
+    <div ng-controller="shoppingListController">
+        <h3>Shoping List #1</h3>
+        <!-- Looping over the First Shopping List 1-->
+        <ul>
+            <li ng-repeat="item in shoppingList1">{{item}}</li>
+        </ul>
+
+         <h3>Filterable Shoping List #1 by Search</h3>
+        <!-- Looping over the Shopping List 1 and filter it-->
+         <div>
+             <input type="text" placeholder="Search Item" ng-model="search">  <!--- Defining Filter --->
+         </div>
+        
+        <ul>
+            <li ng-repeat="item in shoppingList1  | filter : search ">{{item}}</li>   <!--- Applying Filter right inside the ng-repeat -->
+        </ul>
+
+        <h3>Shoping List #2</h3>
+        <!-- Looping over the Shopping List 2-->
+        <ul>
+            <li ng-repeat="item in shoppingList2">There are {{:: item.quantity}} Kg of {{:: item.name}}</li>
+        </ul>
+
+        <h3>Updatable Shoping List #3</h3>
+        <!-- Looping over the updatable Shopping List 2-->
+         <span>Update first item <input type="text" placeholder="Update first item" ng-model="shoppingList2[0].quantity"></span>
+        <ul>
+            <li ng-repeat="item in shoppingList2">{{$index +1 }}. There are {{item.quantity}} Kg of {{item.name}}</li>
+        </ul>
+        <div>
+            <p>Adding Other Items Temporarily</p>
+            <input type="text" placeholder="Add its quantity" ng-model="newItemQuantity">
+             <input type="text" placeholder="Add an item" ng-model="newItemName">
+            <button ng-click="addItem()">Add Item</button>
+        </div>
+        
+    </div>
+</body>
+</html>
