@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuItemsApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Menu Items App</title>
+</head>
+<body>
+    <h1>Using $http Service</h1>
+    <div ng-controller="MenuCategoriesController as menu">
+        <h3>List of Menu Items</h3>
+        <table>
+            <caption>Enjoy Our Meal</caption>
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Menu Item</th>
+                <th>Item Price</th>
+               
+            </tr>
+        </thead>    
+             <tr >
+           <tbody>
+                <tr ng-repeat="item in menu.categories">
+                    <td>{{item.id}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.price}}</td> 
+                </tr>
+            </tbody>           
+        </table>
+    </div>
+    
+</body>
+</html>
