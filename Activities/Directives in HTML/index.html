@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListDirectiveApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>List Items | Angular Directives</title>
+</head>
+<body>
+    <h1>Template Expanding Directive</h1>
+
+    <!-- List #1: Unlimited Items -->
+     <div id="list1" ng-controller="ShoppingListController1 as list">
+        <h3>Shopping List #1</h3>
+        <input type="text" ng-model="list.itemName" placeholder="Item name">
+        <input type="text" ng-model="list.itemQuantity" placeholder="Quantity">
+        <button ng-click="list.addItem();">Add Item</button>
+        <ol>
+            <list-item ng-repeat="item in list.items"></list-item>
+        </ol>
+        <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div>
+     </div>
+
+     <!-- List #2: Limited to 3 items -->
+      <div id="list2" ng-controller="ShoppingListController2 as list">
+        <h3>Shopping list #2 (Limited to 3 items)</h3>
+        <input type="text" ng-model="list.itemName" placeholder="Item name">
+        <input type="text" ng-model="list.itemQuantity" placeholder="Quantity">
+        <button ng-click="list.addItem();">Add Item</button>
+        <ol>
+            <list-item ng-repeat="item in list.items"></list-item>
+        </ol>
+        <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div>
+      </div>
+</body>
+</html>
